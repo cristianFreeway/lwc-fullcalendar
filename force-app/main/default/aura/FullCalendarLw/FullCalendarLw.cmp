@@ -1,0 +1,8 @@
+<!--
+ - Created by Cristian on 10/05/2021.
+ -->
+
+<aura:component description="FullCalendarLw" access="global"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,lightning:actionOverride">
+    <c:fullCalendar />
+</aura:component>

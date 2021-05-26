@@ -95,16 +95,18 @@ export default class FullCalendarComponent extends NavigationMixin(LightningElem
     this.calendar = new FullCalendar.Calendar(calendarEl, {
       plugins: ["dayGrid", "timeGrid", "list","interaction","moment"],
       views: {
-        listDay: { buttonText: "list day" },
-        listWeek: { buttonText: "list week" },
-        listMonth: { buttonText: "list month" },
+        //listDay: { buttonText: "list day" },
+        //listWeek: { buttonText: "list week" },
+        //listMonth: { buttonText: "list month" },
         timeGridWeek: { buttonText: "week time" },
-        timeGridDay: { buttonText: "day time" },
-        dayGridMonth: { buttonText: "month" },
-        dayGridWeek: { buttonText: "week" },
-        dayGridDay: { buttonText: "day" }
+        //timeGridDay: { buttonText: "day time" },
+        //dayGridMonth: { buttonText: "month" },
+        //dayGridWeek: { buttonText: "week" },
+        //dayGridDay: { buttonText: "day" }
       },
-      
+        defaultView: 'timeGridWeek',
+        selectable: true,
+
       eventClick: info => {
         const selectedEvent = new CustomEvent('fceventclick', { detail: info });
         console.log("eventClick",info);
